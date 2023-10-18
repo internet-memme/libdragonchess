@@ -1,0 +1,2 @@
+This library implements the rules of Dragonchess.
+See: https://en.wikipedia.org/wiki/Dragonchess

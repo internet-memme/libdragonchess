@@ -1,0 +1,21 @@
+Boards can be saved as JSON files.
+See ./setup.json as an example.
+White pieces are lower case and black pieces are upper case.
+| Piece Name | Symbol |
+| Empty      | (x)    |
+| Sylph,     | (s)    |
+| Griffon,   | (g)    |
+| Dragon,    | (r)    |
+| Warrior,   | (w)    |
+| Oliphant,  | (o)    |
+| Unicorn,   | (u)    |
+| Hero,      | (h)    |
+| Thief,     | (t)    |
+| Cleric,    | (c)    |
+| Mage,      | (m)    |
+| King,      | (k)    |
+| Paladin,   | (p)    |
+| Dwarf,     | (d)    |
+| Basilisk,  | (b)    |
+| Elemental  | (e)    |
+
