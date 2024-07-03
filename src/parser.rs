@@ -2,8 +2,8 @@ use crate::chess_board::ChessBoard;
 use crate::chess_board::ChessPiece;
 use crate::chess_board::ChessPieceType;
 use crate::chess_board::Color;
-use serde::de::{IntoDeserializer, MapAccess, SeqAccess, VariantAccess, Visitor};
-use serde::{Deserializer, Serialize, Serializer};
+
+use serde::{Serialize, Serializer};
 
 impl Serialize for ChessPiece {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
@@ -15,6 +15,12 @@ impl Serialize for ChessPiece {
             Ok(res) => Ok(res),
             Err(e) => Err(e),
         }
+    }
+}
+
+impl Serialize for ChessBoard{
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error> where S: Serializer {
+
     }
 }
 
@@ -100,13 +106,9 @@ mod tests {
     use crate::chess_board::{ChessBoard, ChessPiece, ChessPieceType, Color};
     use std::{array, fs};
 
-    #[test]
-    fn testtest() {
-        assert!(true)
-    }
 
     fn setup_test_board() -> ChessBoard {
-        let mut chessboard: ChessBoard = array::from_fn(|_| {
+        let chessboard: ChessBoard = array::from_fn(|_| {
             array::from_fn(|_| {
                 array::from_fn(|_| ChessPiece {
                     piece_type: ChessPieceType::Empty,
